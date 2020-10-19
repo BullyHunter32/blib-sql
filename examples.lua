@@ -10,3 +10,12 @@ SQL.InsertValues("bLib_Money", "steamid , amount" , Entity(1):SteamID64() , 500 
     500 = the data i want to put inside the amount column next to the steamid
 -]]
 
+local amount = SQL.GetValues("bLib_Money", "amount", "steamid = "..Entity(1):SteamID64() )
+--[[
+    this will return a table of results, or false if it did not return anything
+    bLib_Money = table name
+    amount = what I want to get from the database
+    "steamid = Entity(1):SteamID64()" = the condition.
+
+    basically says, give me the amount where the steamid is equal to Entity(1):SteamID64(), if you don't get any results then return false
+]]
