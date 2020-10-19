@@ -1,4 +1,15 @@
 bLib = bLib or {}
+
+-- the sql plugin uses this func here
+function bLib:MsgC( txt )
+    if SERVER then
+        return MsgC(Color(255,69,255), "[bLib][Server] ", Color(255,255,255), txt .. "\n" )
+    else
+        return MsgC(Color(255,69,255), "[bLib][Client] ", Color(255,255,255), txt .. "\n" )
+    end
+end
+-- now to the sql...
+
 bLib.SQL = {}
 local SQL = bLib.SQL
 local sql = sql
