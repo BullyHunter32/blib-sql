@@ -10,7 +10,7 @@ SQL.InsertValues("bLib_Money", "steamid , amount" , Entity(1):SteamID64() , 500 
     500 = the data i want to put inside the amount column next to the steamid
 -]]
 
-local amount = SQL.GetValues("bLib_Money", "amount", "steamid = "..Entity(1):SteamID64() )
+local amount = SQL.GetValues("bLib_Money", "amount", "steamid = "..Entity(1):SteamID64() ) -- bear in mind that PLAYER.SteamID64 will return 0 in singleplayer
 --[[
     this will return a table of results, or false if it did not return anything
     bLib_Money = table name
