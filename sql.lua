@@ -1,5 +1,9 @@
 bLib = bLib or {}
 
+-- if u rebrand this im gonna uppercut ur nut
+-- kind regards,
+-- BullyHunter#5877
+
 -- the sql plugin uses this func here
 function bLib:MsgC( txt )
     if SERVER then
