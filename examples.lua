@@ -1,6 +1,6 @@
 local SQL = bLib.SQL
 
-SQL.CreateTable("bLib_Money", "steamid TEXT", "amount NUMBER")
+SQL.CreateTable("bLib_Money", "steamid TEXT", "amount NUMBER") -- name of table then the columsn i want to add, a steamid column which stores TEXT and an amount column which stores numbers
 
 SQL.InsertValues("bLib_Money", "steamid , amount" , Entity(1):SteamID64() , 500 ) 
 --[[
