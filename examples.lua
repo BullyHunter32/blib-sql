@@ -19,3 +19,7 @@ local amount = SQL.GetValues("bLib_Money", "amount", "steamid = "..Entity(1):Ste
 
     basically says, give me the amount where the steamid is equal to Entity(1):SteamID64(), if you don't get any results then return false
 ]]
+
+-- now that i got my 1 piece of data from my table i dont want the table anymore, fuck that hoe
+
+SQL.DeleteTable("bLib_Money") -- bye bye
